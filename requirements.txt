@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 jinja2
+markdown
 sqlalchemy
 python-multipart
 google-generativeai
