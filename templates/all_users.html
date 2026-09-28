@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Users</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>All Users</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Goal</th>
+<th>Intensity</th>
+<th>Updated Plan</th>
+</tr>
+
+{% for user in users %}
+
+<tr>
+<td>{{ user.user_id }}</td>
+<td>{{ user.username }}</td>
+<td>{{ user.goal }}</td>
+<td>{{ user.intensity }}</td>
+<td>{{ user.updated_plan}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitBuddy AI | Smart Workout Planner</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Background Overlay -->
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <!-- Logo / Header -->
+        <div class="brand">
+            <div class="logo">💪</div>
+
+            <div>
+                <h1>FitBuddy <span>AI</span></h1>
+                <p>Smart Workout Planner</p>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Welcome -->
+        <div class="welcome">
+            <h2>Build Your Perfect Workout</h2>
+            <p>
+                Enter your details and let FitBuddy AI create
+                a personalized workout plan for you.
+            </p>
+        </div>
+
+        <!-- Form -->
+        <form action="/generate-workout" method="post">
+
+            <div class="input-group">
+
+                <label>User ID</label>
+                <input
+                    type="text"
+                    name="user_id"
+                    placeholder="Enter your User ID"
+                    required
+                >
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Name</label>
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-group">
+
+                    <label>Age</label>
+                    <input
+                        type="number"
+                        name="age"
+                        placeholder="Age"
+                        min="13"
+                        max="100"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Weight (kg)</label>
+                    <input
+                        type="number"
+                        name="weight"
+                        placeholder="Weight"
+                        min="20"
+                        max="300"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Fitness Goal</label>
+
+                <select name="goal">
+
+                    <option value="Weight Loss">
+                        🔥 Weight Loss
+                    </option>
+
+                    <option value="Muscle Gain">
+                        💪 Muscle Gain
+                    </option>
+
+                    <option value="Fitness">
+                        🏃 General Fitness
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Workout Level</label>
+
+                <select name="intensity">
+
+                    <option value="Beginner">
+                        🌱 Beginner
+                    </option>
+
+                    <option value="Intermediate">
+                        ⚡ Intermediate
+                    </option>
+
+                    <option value="Advanced">
+                        🏆 Advanced
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button type="submit">
+                Generate AI Workout Plan
+                <span>→</span>
+            </button>
+
+        </form>
+
+        <!-- Footer -->
+        <div class="footer">
+
+            <span>🤖 AI Powered</span>
+            <span>•</span>
+            <span>🏋️ Personalized</span>
+            <span>•</span>
+            <span>📊 Smart Fitness</span>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

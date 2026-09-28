@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workout Result</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Workout Plan</h1>
+
+    <h3>{{ username }}</h3>
+
+    <p><b>Goal:</b> {{ goal }}</p>
+
+    <p><b>Intensity:</b> {{ intensity }}</p>
+<div>
+    {{workout_plan|safe}}
+</div>
+
+    <h2>Nutrition Tip</h2>
+
+    <pre>{{ nutrition_tip }}</pre>
+
+    <hr>
+
+    <h2>Improve Plan</h2>
+
+    <form action="/submit-feedback" method="post">
+
+        <input
+            type="hidden"
+            name="user_id"
+            value="{{ user_id }}"
+        >
+
+        <textarea
+            name="feedback"
+            placeholder="Enter feedback..."
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Update Plan
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

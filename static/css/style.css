@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background-image: url("/static/images/fitness-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+/* Dark background overlay */
+
+.overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.62);
+
+    z-index: 0;
+}
+
+
+/* Main Card */
+
+.container {
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 22px;
+
+    position: relative;
+    z-index: 1;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    animation: appear 0.7s ease;
+}
+
+
+/* Card animation */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Brand */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.logo {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #ff512f,
+        #f09819
+    );
+
+    box-shadow:
+        0 8px 20px rgba(240, 152, 25, 0.3);
+}
+
+
+.brand h1 {
+
+    font-size: 30px;
+
+    color: #171717;
+
+    letter-spacing: -1px;
+}
+
+
+.brand h1 span {
+
+    color: #f4511e;
+
+}
+
+
+.brand p {
+
+    color: #777;
+
+    margin-top: 4px;
+
+    font-size: 14px;
+
+}
+
+
+/* Divider */
+
+.line {
+
+    height: 1px;
+
+    background: #e5e5e5;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Welcome */
+
+.welcome {
+
+    margin-bottom: 25px;
+}
+
+
+.welcome h2 {
+
+    font-size: 23px;
+
+    color: #222;
+
+    margin-bottom: 8px;
+
+}
+
+
+.welcome p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* Input */
+
+.input-group {
+
+    margin-bottom: 17px;
+
+}
+
+
+label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin-bottom: 7px;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.25s;
+
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #f4511e;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(244, 81, 30, 0.1);
+
+}
+
+
+/* Two columns */
+
+.row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* Button */
+
+button {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 15px;
+
+    margin-top: 8px;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #ff512f,
+        #f09819
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(244, 81, 30, 0.3);
+
+    transition: 0.25s;
+}
+
+
+button span {
+
+    margin-left: 8px;
+
+    font-size: 20px;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(244, 81, 30, 0.4);
+}
+
+
+button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* Footer */
+
+.footer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 15px;
+
+    }
+
+    .container {
+
+        padding: 25px 20px;
+
+    }
+
+    .brand h1 {
+
+        font-size: 25px;
+
+    }
+
+    .row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+    .footer {
+
+        flex-wrap: wrap;
+
+    }
+
+}
